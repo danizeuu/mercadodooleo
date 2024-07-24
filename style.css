@@ -1,0 +1,330 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@100..900&display=swap");
+
+:root {
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Catamaran", sans-serif;
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+#navbar {
+  background-image: linear-gradient(to right, #211f20, #0a0a0a, rgb(8, 8, 8));
+  height: 22rem;
+  display: grid;
+  /* align-items: center; */
+  max-width: 100%;
+
+  box-shadow: 0.1rem 0.45rem 1rem black;
+}
+
+#top-bar {
+  height: 4rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.925);
+  display: flex;
+  justify-content: flex-start;
+  align-items: end;
+
+  grid-area: topBar;
+}
+
+#navbar .container {
+  background-image: url(./assets/images/mercado-oleo.png);
+  background-size: contain;
+
+  display: flex;
+
+  width: 300px;
+  height: 130px;
+  text-shadow: 10px 10px 10px #000000;
+
+  background-repeat: no-repeat;
+
+  grid-area: logo;
+}
+
+#navbar #nav-list {
+  color: white;
+  text-decoration: none;
+  list-style: none;
+  display: flex;
+  text-wrap: nowrap;
+  align-items: center;
+
+  font-size: 2.3rem;
+
+  margin-bottom: 2rem;
+  /* gap: 8rem; */
+
+  background-color: yellow;
+
+  max-width: 100%;
+  max-height: 6rem;
+  justify-content: center;
+
+  grid-area: navList;
+}
+
+#navbar #nav-list .anchor-pags,
+.anchor-dd {
+  padding: 0.6rem 2rem 0.6rem 2rem;
+  border-radius: 2rem;
+  max-width: 240px;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+#navbar #nav-list #products-list {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: end; */
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.products .nav-products {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+
+  list-style: none;
+  position: absolute;
+}
+
+.products .nav-products {
+  background-color: white;
+  padding: 3rem;
+  width: 25rem;
+  height: 25rem;
+  display: flex;
+  justify-content: start;
+
+  font-size: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  box-shadow: 0.5rem 1rem 3rem -1rem rgba(0, 0, 0, 0.767);
+
+  margin-top: 5.9rem;
+}
+
+#products-list .fa-solid.fa-caret-up {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.2s linear;
+
+  display: flex;
+  position: absolute;
+  justify-content: end;
+  margin-top: 4.6rem;
+  color: white;
+}
+
+#products-list:hover .fa-solid.fa-caret-up {
+  visibility: visible;
+  opacity: 1;
+}
+
+#products-list .nav-products .border-b {
+  border-bottom: 0.1rem solid rgba(0, 0, 0, 0.411);
+  width: 95%;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#products-list:hover .nav-products {
+  visibility: visible;
+  opacity: 1;
+
+  flex-direction: column;
+}
+
+#products-list .products,
+.nav-products {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  align-content: start;
+}
+
+#products-list .nav-products li:hover::after {
+  content: "◄";
+  margin-left: 0.6rem;
+}
+
+#navbar .grid-search input {
+  background-color: #000000;
+  border-style: hidden;
+
+  font-size: 2rem;
+  font-weight: normal;
+  color: rgb(243, 243, 111);
+  outline: 0px solid transparent;
+  padding-left: 1rem;
+  word-wrap: wrap;
+  border-radius: 3rem;
+  text-indent: 1rem;
+
+  display: flex;
+
+  grid-area: search;
+}
+
+#navbar .grid-search input::placeholder {
+  color: rgba(255, 255, 0, 0.5);
+  font-size: 1.6rem;
+}
+
+#navbar .grid-search button .fa-solid {
+  color: yellow;
+  font-size: 1.8rem;
+}
+
+#navbar .grid-search input:focus-visible::first-line {
+  outline: 1px solid white;
+}
+
+#navbar .grid-search button {
+  background-color: transparent;
+  border-style: hidden;
+  cursor: pointer;
+
+  position: absolute;
+
+  justify-content: center;
+  align-items: center;
+
+  width: 4rem;
+  height: 4rem;
+  padding: 0.1rem;
+
+  display: flex;
+  grid-area: button;
+}
+
+#navbar .grid-search button:hover {
+  background-color: #0a0a0a;
+  border-radius: 50%;
+}
+
+#navbar .grid-search .input-container {
+  background-color: #000000;
+  border-radius: 3rem;
+  padding: 0.5rem;
+  display: grid;
+  margin-right: 1rem;
+
+  grid-template-areas: "search search button";
+}
+
+#navbar .grid-search {
+  display: flex;
+
+  width: 6rem;
+  justify-content: end;
+  align-items: center;
+
+  grid-area: inputCont;
+}
+
+#navbar .grid-search .input-container #search {
+  width: 1rem;
+  visibility: hidden;
+  transition: width 1.3s;
+}
+
+#navbar .grid-search .input-container:hover #search {
+  width: 15rem;
+  visibility: visible;
+
+  transition: width 1.5s;
+}
+
+#navbar {
+  grid-template-areas:
+    ". . . . ."
+    ". . logo . inputCont"
+    ". . . . inputCont"
+    ". . . . inputCont"
+    "navList navList navList navList navList";
+
+  justify-content: space-between;
+  align-content: space-around;
+}
+
+#navbar #nav-list .anchor-pags .fa-solid.fa-minus,
+.products .fa-solid.fa-minus {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  outline: 1rem solid yellow;
+  outline-offset: -4px;
+  justify-content: center;
+  height: 1rem;
+  color: #0a0a0a;
+
+  visibility: hidden;
+  transition: visibility 0.2s, font-size 0.2s linear;
+}
+
+#navbar #nav-list .anchor-pags:hover .fa-solid.fa-minus,
+.products:hover .fa-solid.fa-minus {
+  visibility: visible;
+  font-size: 6rem;
+  max-block-size: inherit;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+#inicio {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 0, 0.849);
+  box-shadow: 0.5rem 0.7rem 2rem -1rem black;
+  width: 80%;
+  height: 40rem;
+
+  border-radius: 1rem;
+}
+
+#inicio > h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-style: bolder;
+  padding: 1rem;
+
+  border-radius: 1rem 1rem 0 0;
+
+  color: white;
+  background-color: black;
+}
+
+main .mid-banner {
+  margin-top: 10rem;
+  background-image: url(./assets/images/banner-meio.webp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 90vh;
+}
