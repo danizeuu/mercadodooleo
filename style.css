@@ -200,7 +200,7 @@ body {
   border-style: hidden;
   cursor: pointer;
 
-  position: absolute;
+  /* position: absolute; */
 
   justify-content: center;
   align-items: center;
@@ -245,7 +245,7 @@ body {
 }
 
 #navbar .grid-search .input-container:hover #search {
-  width: 15rem;
+  width: 12rem;
   visibility: visible;
 
   transition: width 1.5s;
