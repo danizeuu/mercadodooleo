@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(255, 255, 162);
+  flex-wrap: wrap;
+}
+
+#inicio {
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.849);
+  box-shadow: 0.2rem 0.7rem 2rem rgba(0, 0, 0, 0.726);
+  width: 80%;
+  height: 40rem;
+
+  border-radius: 1rem;
+}
+
+#inicio > h1 {
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-style: bolder;
+  padding: 1rem;
+
+  border-radius: 1rem 1rem 0 0;
+
+  color: white;
+  background-color: black;
+}
+
+main .mid-banner {
+  margin-top: 10rem;
+  background-image: url(./assets/images/banner-meio.webp);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 80%;
+  height: 90vh;
+}

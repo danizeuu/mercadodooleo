@@ -23,6 +23,7 @@ body {
   display: grid;
   /* align-items: center; */
   max-width: 100%;
+  overflow: hidden;
 
   box-shadow: 0.1rem 0.45rem 1rem black;
 }
@@ -43,6 +44,7 @@ body {
   background-size: contain;
 
   display: flex;
+  justify-content: center;
 
   width: 300px;
   height: 130px;
@@ -163,17 +165,24 @@ body {
   margin-left: 0.6rem;
 }
 
-#navbar .grid-search input {
+#navbar .grid-search .input-container {
   background-color: #000000;
+  border-radius: 3rem;
+  padding: 0.5rem;
+  display: grid;
+  margin-right: 1rem;
+}
+
+#navbar .grid-search input {
+  background-color: transparent;
   border-style: hidden;
 
-  font-size: 2rem;
+  font-size: 1.4rem;
   font-weight: normal;
-  color: rgb(243, 243, 111);
+  color: rgb(255, 255, 255);
   outline: 0px solid transparent;
   padding-left: 1rem;
   word-wrap: wrap;
-  border-radius: 3rem;
   text-indent: 1rem;
 
   display: flex;
@@ -191,16 +200,12 @@ body {
   font-size: 1.8rem;
 }
 
-#navbar .grid-search input:focus-visible::first-line {
-  outline: 1px solid white;
-}
-
 #navbar .grid-search button {
   background-color: transparent;
   border-style: hidden;
   cursor: pointer;
 
-  /* position: absolute; */
+  position: relative;
 
   justify-content: center;
   align-items: center;
@@ -213,18 +218,16 @@ body {
   grid-area: button;
 }
 
+#navbar .grid-search .where {
+  position: absolute;
+}
+
 #navbar .grid-search button:hover {
   background-color: #0a0a0a;
   border-radius: 50%;
 }
 
 #navbar .grid-search .input-container {
-  background-color: #000000;
-  border-radius: 3rem;
-  padding: 0.5rem;
-  display: grid;
-  margin-right: 1rem;
-
   grid-template-areas: "search search button";
 }
 
@@ -245,7 +248,7 @@ body {
 }
 
 #navbar .grid-search .input-container:hover #search {
-  width: 12rem;
+  width: 20rem;
   visibility: visible;
 
   transition: width 1.5s;
@@ -254,7 +257,7 @@ body {
 #navbar {
   grid-template-areas:
     ". . . . ."
-    ". . logo . inputCont"
+    ". logo logo logo inputCont"
     ". . . . inputCont"
     ". . . . inputCont"
     "navList navList navList navList navList";
@@ -285,46 +288,56 @@ body {
   max-block-size: inherit;
 }
 
-main {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 825px) {
+  #navbar {
+    grid-template-areas:
+      ". . . ."
+      ". logo logo inputCont"
+      ". . . inputCont"
+      ". . . .";
 
-  flex-wrap: wrap;
+    height: 14rem;
+
+    justify-items: center;
+  }
+
+  #navbar .container {
+    display: flex;
+    justify-content: center;
+    margin-right: 1rem;
+  }
+
+  #navbar #nav-list {
+    display: none;
+  }
+
+  #navbar .grid-search {
+    align-items: end;
+    margin-bottom: 1rem;
+  }
+
+  #navbar .grid-search:hover .input-container:hover #search {
+    width: 18rem;
+    transition: width 1.7s;
+  }
+
+  #navbar .grid-search .input-container {
+    padding: 0.2 0.4rem;
+  }
 }
 
-#inicio {
-  margin-top: 2rem;
-  background-color: rgba(255, 255, 0, 0.849);
-  box-shadow: 0.5rem 0.7rem 2rem -1rem black;
-  width: 80%;
-  height: 40rem;
+@media screen and (max-width: 700px) {
+  #navbar .grid-search:hover .input-container:hover #search {
+    width: 10rem;
+    transition: width 0.7s;
+  }
 
-  border-radius: 1rem;
-}
+  #navbar .grid-search input::placeholder {
+    color: rgba(255, 255, 0, 0.5);
+    font-size: 1.3rem;
+  }
 
-#inicio > h1 {
-  text-align: center;
-  font-weight: bolder;
-  font-size: 2.5rem;
-  text-transform: uppercase;
-  font-style: bolder;
-  padding: 1rem;
-
-  border-radius: 1rem 1rem 0 0;
-
-  color: white;
-  background-color: black;
-}
-
-main .mid-banner {
-  margin-top: 10rem;
-  background-image: url(./assets/images/banner-meio.webp);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 80%;
-  height: 90vh;
+  #navbar .grid-search input {
+    font-size: 1.6rem;
+  }
 }
