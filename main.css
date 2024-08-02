@@ -10,8 +10,17 @@
   font-size: 62.5%;
 }
 
+html,
+body,
 main {
+  height: max-content;
+}
+
+body {
   background-color: rgb(255, 255, 162);
+}
+
+main {
   flex-wrap: wrap;
 }
 

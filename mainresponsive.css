@@ -93,8 +93,8 @@
     opacity: 0;
   }
 
-  .list-closed .bar:hover ~ .dropdown-content {
-    display: block;
+  .list-closed .bar:hover ~ .dropdown-content:active {
+    display: flex;
     animation: opening 0.25s normal;
   }
 

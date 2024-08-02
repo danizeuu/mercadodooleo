@@ -22,16 +22,17 @@
     grid-template-areas:
       "topbar topbar topbar topbar topbar"
       ". . . . ."
-      ". . . . inputCont"
-      ". . logo logo inputCont";
+      ". . logo . ."
+      ". inputCont inputCont inputCont .";
 
-    height: 17rem;
+    height: 25rem;
 
-    justify-items: center;
+    justify-items: end;
   }
 
   #navbar .container {
     display: flex;
+    align-items: end;
   }
 
   #navbar #nav-list {
@@ -39,14 +40,25 @@
   }
 
   #navbar .grid-search {
-    align-items: end;
+    display: grid;
+    /* align-items: end; */
+    justify-items: center;
     margin-bottom: 1rem;
   }
 
-  #navbar .grid-search:hover .input-container:hover #search {
+  #navbar .grid-search .input-container #search {
+    visibility: visible;
+    width: 100%;
+  }
+
+  #navbar .grid-search .input-container:hover #search {
+    width: 30rem;
+  }
+
+  /* #navbar .grid-search:hover .input-container:hover #search {
     width: 18rem;
     transition: width 1.7s;
-  }
+  } */
 
   #navbar .grid-search .input-container {
     padding: 0.2 0.4rem;
@@ -54,10 +66,10 @@
 }
 
 @media screen and (max-width: 700px) {
-  #navbar .grid-search:hover .input-container:hover #search {
+  /* #navbar .grid-search:hover .input-container:hover #search {
     width: 10rem;
     transition: width 0.7s;
-  }
+  } */
 
   #navbar .grid-search input::placeholder {
     color: rgba(255, 255, 0, 0.5);
@@ -66,5 +78,15 @@
 
   #navbar .grid-search input {
     font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  #navbar .grid-search .input-container #search {
+    width: max-content;
+  }
+
+  #navbar .grid-search .input-container:hover #search {
+    width: 30rem;
   }
 }
