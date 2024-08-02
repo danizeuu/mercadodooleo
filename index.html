@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="navbar.css" />
     <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="navresponsive.css" />
+    <link rel="stylesheet" href="mainresponsive.css" />
     <link
       rel="shortcut icon"
       href="./assets/images/favicon.ico"
@@ -85,11 +87,32 @@
       </header>
 
       <main>
+        <div class="list-closed">
+          <button id="myBtn" class="dropbtn">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+          </div>
+        </div>
+
         <section id="inicio">
           <h1>Alguma coisa</h1>
         </section>
         <div class="mid-banner"></div>
       </main>
     </div>
+
+    <script>
+      document.getElementById("myBtn").onclick = function () {
+        myFunction();
+      };
+
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+    </script>
   </body>
 </html>

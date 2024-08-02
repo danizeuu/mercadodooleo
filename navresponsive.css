@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%;
+}
+
+@media screen and (max-width: 825px) {
+  #navbar {
+    grid-template-areas:
+      ". . . . ."
+      "closedList . logo . inputCont"
+      "closedList . . . ."
+      ". . . . .";
+
+    height: 14rem;
+
+    /* justify-items: center; */
+  }
+
+  #navbar #nav-list {
+    display: none;
+  }
+
+  #navbar .grid-search {
+    align-items: end;
+    margin-bottom: 1rem;
+  }
+
+  #navbar .grid-search:hover .input-container:hover #search {
+    width: 18rem;
+    transition: width 1.7s;
+  }
+
+  #navbar .grid-search .input-container {
+    padding: 0.2 0.4rem;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #navbar .grid-search:hover .input-container:hover #search {
+    width: 10rem;
+    transition: width 0.7s;
+  }
+
+  #navbar .grid-search input::placeholder {
+    color: rgba(255, 255, 0, 0.5);
+    font-size: 1.3rem;
+  }
+
+  #navbar .grid-search input {
+    font-size: 1.6rem;
+  }
+}

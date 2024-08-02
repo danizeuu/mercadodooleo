@@ -11,14 +11,16 @@
 }
 
 main {
-  display: flex;
-  justify-content: center;
   background-color: rgb(255, 255, 162);
   flex-wrap: wrap;
 }
 
+main #inicio,
+.mid-banner {
+  margin: 2rem auto;
+}
+
 #inicio {
-  margin-top: 2rem;
   background-color: rgba(255, 255, 255, 0.849);
   box-shadow: 0.2rem 0.7rem 2rem rgba(0, 0, 0, 0.726);
   width: 80%;
@@ -52,4 +54,8 @@ main .mid-banner {
   background-repeat: no-repeat;
   width: 80%;
   height: 90vh;
+}
+
+.list-closed {
+  display: none;
 }
