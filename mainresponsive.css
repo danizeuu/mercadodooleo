@@ -81,7 +81,7 @@
   }
 
   .dropdown-content {
-    animation: opening 0.25s normal;
+    animation: opening 0.25s ease normal;
   }
 
   .bar {
@@ -99,11 +99,11 @@
   }
 
   @keyframes opening {
-    from {
+    0% {
       width: 0rem;
     }
 
-    to {
+    100% {
       width: 30rem;
     }
   }
