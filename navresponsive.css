@@ -27,7 +27,7 @@
 
     height: 25rem;
 
-    justify-items: end;
+    /* justify-items: end; */
   }
 
   #navbar #nav-list {
@@ -42,9 +42,9 @@
     margin-bottom: 1rem;
   }
 
-  #navbar .grid-search .input-container {
-    width: 100vw;
-  }
+  /* #navbar .grid-search .input-container {
+    width: 100%;
+  } */
 
   #navbar .grid-search .input-container #search {
     visibility: visible;
@@ -70,7 +70,7 @@
     font-size: 1.6rem;
   }
 }
-
+/* 
 @media screen and (max-width: 430px) {
   #navbar .grid-search .input-container {
     width: 100%;
@@ -88,4 +88,4 @@
     width: 100%;
     height: auto;
   }
-}
+} */

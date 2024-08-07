@@ -27,7 +27,7 @@
     top: 0rem;
     bottom: 2rem;
     height: 100%;
-    width: 30rem;
+    width: 0rem;
 
     position: fixed;
   }
@@ -63,18 +63,18 @@
     top: 4rem;
     left: 0rem;
     overflow: hidden;
-    width: 30rem;
+    width: 60vw;
     height: 100vh;
     padding: 4rem;
 
     list-style: none;
-    background-color: white;
+    background-color: #ffffff;
   }
 
   .dropdown-content a {
     display: flex;
     text-decoration: none;
-    color: black;
+    color: rgb(17, 17, 17);
     font-size: 2rem;
     text-indent: 1.6rem;
     animation: text-animation 0.6s linear;
@@ -104,7 +104,7 @@
     }
 
     100% {
-      width: 30rem;
+      width: 60vw;
     }
   }
 

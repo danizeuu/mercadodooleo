@@ -228,7 +228,7 @@ body {
 }
 
 #navbar .grid-search .input-container {
-  grid-template-areas: "search search button";
+  grid-template-areas: "search button";
 }
 
 #navbar .grid-search {
