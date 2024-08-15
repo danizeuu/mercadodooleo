@@ -166,7 +166,7 @@ body {
 }
 
 #navbar .grid-search .input-container {
-  background-color: #000000;
+  background-color: #ffffff;
   border-radius: 3rem;
   padding: 0.5rem;
   display: grid;
@@ -179,7 +179,7 @@ body {
 
   font-size: 1.4rem;
   font-weight: normal;
-  color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   outline: 0px solid transparent;
   padding-left: 1rem;
   word-wrap: wrap;
@@ -191,12 +191,12 @@ body {
 }
 
 #navbar .grid-search input::placeholder {
-  color: rgba(255, 255, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
   font-size: 1.6rem;
 }
 
 #navbar .grid-search button .fa-solid {
-  color: yellow;
+  color: rgb(0, 0, 0);
   font-size: 1.8rem;
 }
 
@@ -223,7 +223,12 @@ body {
 }
 
 #navbar .grid-search button:hover {
-  background-color: #0a0a0a;
+  background-color: #d1d1d1;
+  border-radius: 50%;
+}
+
+#navbar .grid-search button:hover .fa-solid.fa-magnifying-glass {
+  color: rgb(12, 12, 12);
   border-radius: 50%;
 }
 
